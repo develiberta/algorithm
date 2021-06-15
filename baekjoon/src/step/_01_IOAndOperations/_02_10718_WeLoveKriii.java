@@ -9,14 +9,14 @@ package step._01_IOAndOperations;
  * [입력]
  * 없음
  * [출력]
+ * 두 줄에 걸쳐 "강한친구 대한육군"을 한 줄에 한 번씩 출력한다.
+ * (예제 출력 1)
  * 강한친구 대한육군
  * 강한친구 대한육군
  */
 public class _02_10718_WeLoveKriii {
     public static void main(String[] args) {
-        Integer count = 2;
-        for (int i=0; i<count; i++) {
-            System.out.println("강한친구 대한육군");
-        }
+        System.out.println("강한친구 대한육군");
+        System.out.println("강한친구 대한육군");
     }
 }
