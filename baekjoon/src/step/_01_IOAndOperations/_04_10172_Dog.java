@@ -2,6 +2,7 @@ package step._01_IOAndOperations;
 
 /* date : 2021-06-14 (월)
  * author : develiberta
+ *
  * [문제]
  * 아래 예제와 같이 개를 출력하시오.
  * [입력]
