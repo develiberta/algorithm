@@ -26,10 +26,10 @@ public class _09_10869_AOperationB {
         Scanner in = new Scanner(System.in);
         int A = in.nextInt();
         int B = in.nextInt();
-        System.out.println((A+B));
-        System.out.println((A-B));
-        System.out.println((A*B));
-        System.out.println((A/B));
-        System.out.println((A%B));
+        System.out.println(A+B);
+        System.out.println(A-B);
+        System.out.println(A*B);
+        System.out.println(A/B);
+        System.out.println(A%B);
     }
 }
