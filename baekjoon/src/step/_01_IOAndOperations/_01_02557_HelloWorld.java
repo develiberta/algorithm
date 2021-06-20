@@ -2,8 +2,12 @@ package step._01_IOAndOperations;
 
 /* date : 2021-06-12 (토)
  * author : develiberta
- * number : 2557
+ * number : 02557
  *
+ * [단계]
+ * 01. 입출력과 사칙연산
+ * [제목]
+ * 01. Hello World (02557)
  * [문제]
  * Hello World!를 출력하시오.
  * [입력]

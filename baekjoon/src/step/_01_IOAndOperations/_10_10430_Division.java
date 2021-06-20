@@ -6,6 +6,10 @@ import java.util.Scanner;
  * author : develiberta
  * number : 10430
  *
+ * [단계]
+ * 01. 입출력과 사칙연산
+ * [제목]
+ * 10. 나머지 (10430)
  * [문제]
  * (A+B)%C는 ((A%C) + (B%C))%C 와 같을까?
  * (A×B)%C는 ((A%C) × (B%C))%C 와 같을까?
