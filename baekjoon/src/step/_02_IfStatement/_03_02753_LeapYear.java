@@ -2,7 +2,7 @@ package step._02_IfStatement;
 
 import java.util.Scanner;
 
-/* date : 2021-06-23 (화)
+/* date : 2021-06-23 (수)
  * author : develiberta
  * number : 02753
  *
