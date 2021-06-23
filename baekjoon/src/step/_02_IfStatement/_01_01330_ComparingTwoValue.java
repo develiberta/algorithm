@@ -1,4 +1,4 @@
-package step_02_IfStatement;
+package step._02_IfStatement;
 
 import java.util.Scanner;
 
