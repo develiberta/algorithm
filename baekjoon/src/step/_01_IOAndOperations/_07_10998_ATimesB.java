@@ -31,5 +31,7 @@ public class _07_10998_ATimesB {
         int A = in.nextInt();
         int B = in.nextInt();
         System.out.print(A*B);
+
+        in.close();
     }
 }

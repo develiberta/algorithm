@@ -49,5 +49,7 @@ public class _11_02588_Multiplication {
         System.out.println(result_2);
         System.out.println(result_3);
         System.out.println(result_4);
+
+        in.close();
     }
 }

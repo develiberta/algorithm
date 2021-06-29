@@ -35,5 +35,7 @@ public class _09_10869_AOperationB {
         System.out.println(A*B);
         System.out.println(A/B);
         System.out.println(A%B);
+
+        in.close();
     }
 }

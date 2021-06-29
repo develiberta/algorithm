@@ -42,5 +42,7 @@ public class _02_10950_APlusB3 {
 
             System.out.println(A+B);
         }
+
+        in.close();
     }
 }

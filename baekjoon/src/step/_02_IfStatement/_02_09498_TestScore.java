@@ -39,5 +39,7 @@ public class _02_09498_TestScore {
         }
 
         System.out.print(grade);
+
+        in.close();
     }
 }

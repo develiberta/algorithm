@@ -41,5 +41,7 @@ public class _03_02753_LeapYear {
         }
 
         System.out.print(isLeapYear);
+
+        in.close();
     }
 }

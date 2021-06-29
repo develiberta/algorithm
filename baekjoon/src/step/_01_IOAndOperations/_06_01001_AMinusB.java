@@ -27,5 +27,7 @@ public class _06_01001_AMinusB {
         int A = in.nextInt();
         int B = in.nextInt();
         System.out.print(A-B);
+
+        in.close();
     }
 }

@@ -36,5 +36,7 @@ public class _10_10430_Division {
         System.out.println(((A%C)+(B%C)) % C);
         System.out.println((A*B) % C);
         System.out.println(((A%C)*(B%C)) % C);
+
+        in.close();
     }
 }

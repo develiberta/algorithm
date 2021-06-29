@@ -27,5 +27,7 @@ public class _05_01000_APlusB {
         int A = in.nextInt();
         int B = in.nextInt();
         System.out.print(A+B);
+
+        in.close();
     }
 }

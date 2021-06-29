@@ -31,5 +31,7 @@ public class _08_01008_ADividedByB {
         int A = in.nextInt();
         int B = in.nextInt();
         System.out.print((double)A/B);
+
+        in.close();
     }
 }

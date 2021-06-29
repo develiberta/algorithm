@@ -37,5 +37,7 @@ public class _01_02739_MultiplicationTable {
         for (int i=1; i<=9; i++) {
             System.out.printf("%d * %d = %d\n", num, i, num * i);
         }
+
+        in.close();
     }
 }

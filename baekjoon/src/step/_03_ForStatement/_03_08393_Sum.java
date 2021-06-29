@@ -32,5 +32,7 @@ public class _03_08393_Sum {
         }
 
         System.out.println(sum);
+
+        in.close();
     }
 }

@@ -50,5 +50,7 @@ public class _04_14681_SelectQuadrant {
         }
 
         System.out.print(quadrant);
+
+        in.close();
     }
 }

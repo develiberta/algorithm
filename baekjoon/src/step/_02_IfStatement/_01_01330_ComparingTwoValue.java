@@ -47,5 +47,7 @@ public class _01_01330_ComparingTwoValue {
         } else {
             System.out.print("==");
         }
+
+        in.close();
     }
 }

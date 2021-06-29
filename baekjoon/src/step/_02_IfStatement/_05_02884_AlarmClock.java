@@ -54,5 +54,7 @@ public class _05_02884_AlarmClock {
         }
 
         System.out.print(hour + " " + minute);
+
+        in.close();
     }
 }
