@@ -1,6 +1,10 @@
 package step._05_OneDimensionArray;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 /* date : 2021-07-05 (월)
  * author : develiberta
