@@ -60,12 +60,7 @@ public class _02_04673_SelfNumber {
 
         int[] array = new int[10000];
         for (int i=1; i<10001; i++) {
-            int nonSelf = i;
-            int tmp = i;
-            while (tmp != 0) {
-                nonSelf += tmp % 10;
-                tmp = tmp / 10;
-            }
+            int nonSelf = d(i);
             if (nonSelf-1 < 10000) {
                 array[nonSelf-1] = nonSelf;
             }
@@ -79,5 +74,14 @@ public class _02_04673_SelfNumber {
 
         bw.flush();
         bw.close();
+    }
+
+    private static int d(int n) {
+        int tmp = n;
+        while (tmp != 0) {
+            n += tmp % 10;
+            tmp = tmp / 10;
+        }
+        return n;
     }
 }
