@@ -48,9 +48,10 @@ public class _04_02675_StringRepeat {
             int cntRepeat = Integer.parseInt(st.nextToken());
             String strRepeat = st.nextToken();
             for (int j=0; j<strRepeat.length(); j++) {
-                for (int k=0; k<cntRepeat; k++) {
-                    sb.append(strRepeat.charAt(j));
-                }
+//                for (int k=0; k<cntRepeat; k++) {
+//                    sb.append(strRepeat.charAt(j));
+//                }
+                sb.append(strRepeat.substring(j, j+1).repeat(cntRepeat));
             }
             sb.append("\n");
         }
