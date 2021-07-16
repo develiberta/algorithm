@@ -56,18 +56,14 @@ public class _10_01316_GroupWordChecker {
                 int lastIndex = word.lastIndexOf(word.charAt(j));
                 /* 아래와 같이 정규식 이용 가능 */
 //                String regex = ".*[^" + word.charAt(j) + "]" + "+.*";
-//                if (word.substring(j, lastIndex).matches(regex) == true) {
+//                if (word.substring(j, (j=lastIndex)).matches(regex) == true) {
 //                    isGroupWord = false;
 //                    break;
-//                } else {
-//                    j = lastIndex;
 //                }
                 /* 아래와 같이 replace 이용 가능 */
-                if (word.substring(j, lastIndex).replace(String.valueOf(word.charAt(j)), "").length() > 0) {
+                if (word.substring(j, (j=lastIndex)).replace(String.valueOf(word.charAt(j)), "").length() > 0) {
                     isGroupWord = false;
                     break;
-                } else {
-                    j = lastIndex;
                 }
             }
             if (isGroupWord == true) {
