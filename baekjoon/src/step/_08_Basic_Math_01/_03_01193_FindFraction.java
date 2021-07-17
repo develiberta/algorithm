@@ -44,8 +44,7 @@ public class _03_01193_FindFraction {
         int firstInGroup = 1;   // 군의 첫번째 수
         int numerator;          // 분자
         int denominator;        // 분모
-
-        /* 방법 (1) */
+        
         while (firstInGroup + group <= N) {
             firstInGroup += group++;
         }
