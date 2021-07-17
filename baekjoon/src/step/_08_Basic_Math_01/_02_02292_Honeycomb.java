@@ -36,26 +36,13 @@ public class _02_02292_Honeycomb {
 
         int N = Integer.parseInt(br.readLine());
         int group = 1;
-
-        /* 방법 (1) */
-        int maxInGroup = 1;
+        int count = 1;
 
         if (N > 1) {
-            while(true) {
-                maxInGroup += group++ * 6;
-                if (N <= maxInGroup) {
-                    break;
-                }
+            while(N > count) {
+                count += group++ * 6;
             }
         }
-
-        /* 방법 (2) */
-//        for (int i=2; i<=N; i++) {
-//            if (N <= (3*(i)*(i-1)+1)) {
-//                group = i;
-//                break;
-//            }
-//        }
 
         bw.write(String.valueOf(group));
 
