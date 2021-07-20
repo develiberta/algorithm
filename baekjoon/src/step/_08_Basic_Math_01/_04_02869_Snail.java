@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-/* date : 2021-07-20 (월)
+/* date : 2021-07-20 (화)
  * author : develiberta
  * number : 02869
  *
