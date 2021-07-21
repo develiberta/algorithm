@@ -40,21 +40,33 @@ public class _03_01193_FindFraction {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
-        int group = 1;          // 군
-        int firstInGroup = 1;   // 군의 첫번째 수
+        int group = 1;          // 군의 인덱스
+//        int firstInGroup = 1;   // 군의 첫번째 수의 인덱스
+        int lastInGroup = 1;    // 군의 마지막 수의 인덱스
         int numerator;          // 분자
         int denominator;        // 분모
         
-        while (firstInGroup + group <= N) {
-            firstInGroup += group++;
-        }
+//        while (firstInGroup + group <= N) {
+//            firstInGroup += group++;
+//        }
+//
+//        if (group % 2 == 1) {
+//            denominator = N - firstInGroup + 1;
+//            numerator = (group + 1) - denominator;
+//        } else {
+//            numerator = N - firstInGroup + 1;
+//            denominator = (group + 1) - numerator;
+//        }
 
-        if (group % 2 == 1) {
-            denominator = N - firstInGroup + 1;
-            numerator = (group + 1) - denominator;
-        } else {
-            numerator = N - firstInGroup + 1;
+        while (N > lastInGroup) {
+            lastInGroup += ++group;
+        }
+        if (group % 2 == 0) {
+            numerator = N - (lastInGroup - group);
             denominator = (group + 1) - numerator;
+        } else {
+            denominator = N - (lastInGroup - group);
+            numerator = (group + 1) - denominator;
         }
 
         bw.write(numerator + "/" + denominator);
