@@ -48,32 +48,60 @@ public class _09_01011_FlyMeToTheAlphaCentauri {
         StringTokenizer st;
 
         int T = Integer.parseInt(br.readLine());
-        int count = 0;
+
         for (int i=0; i<T; i++) {
-            count = 0;
             st = new StringTokenizer(br.readLine(), " ");
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
             int d = y - x;
-            int j = 1;
-            boolean twice = false;
-            while (d > 0) {
-                d -= j;
-                if (twice == true) {
-                    j++;
-                }
-                twice = !twice;
-                count++;
-            }
-            bw.write(count + "\n");
+            bw.write(equation2(d) + "\n");
         }
-
-        /* 재미있는 다른 풀이들 (1) n(n+1)/2 + (n+1) = (n+1)^2 임을 이용한 풀이 */
-        /* 재미있는 다른 풀이들 (2) n(n+1) = d 에서 근의 공식을 이용해서 n을 d에 관한 식으로 정리한 풀이 */
 
         br.close();
 
         bw.flush();
         bw.close();
+    }
+
+    /* (1) 하나씩 더해가는 풀이 */
+    private static int plusByStep(int d) {
+        int count = 0;
+        int j = 1;
+        boolean twice = false;
+        while (d > 0) {
+            d -= j;
+            if (twice == true) {
+                j++;
+            }
+            twice = !twice;
+            count++;
+        }
+        return count;
+    }
+
+    /* (2) n(n+1)/2 + (n+1) = (n+1)^2 임을 이용한 풀이 */
+    private static int equation1(int d) {
+        int count;
+        int m = (int) (Math.sqrt(d) - 1);
+        int estimate = (m + 1) * (m + 1);
+        /* d >= estimate 는 항상 성립 */
+        if (d == estimate) count = 2 * m + 1;
+        else if (d <= estimate + (m + 1)) count = 2 * m + 2;
+//        else if (d > estimate + (m + 1)) count = 2 * m + 3;
+        else count = 2 * m + 3; // 효율을 위해 위의 식을 이와 같이 변경
+        return count;
+    }
+
+    /* (3) n(n+1) = d 에서 근의 공식을 이용해서 n을 d에 관한 식으로 정리한 풀이 */
+    private static int equation2(int d) {
+        int count;
+        int m = (int) ((-1 + Math.sqrt(1 + 4 * d)) / 2);
+        int estimate = m * (m + 1);
+        /* d >= estimate 는 항상 성립 */
+        if (d == estimate) count = 2 * m;
+        else if (d <= estimate + (m + 1)) count = 2 * m + 1;
+//        else if (d > estimate + (m + 1)) count = 2 * m + 2;
+        else count = 2 * m + 2; // 효율을 위해 위의 식을 이와 같이 변경
+        return count;
     }
 }
