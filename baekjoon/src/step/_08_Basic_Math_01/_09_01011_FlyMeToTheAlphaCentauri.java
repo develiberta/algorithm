@@ -85,9 +85,10 @@ public class _09_01011_FlyMeToTheAlphaCentauri {
         int m = (int) (Math.sqrt(d) - 1);
         int estimate = (m + 1) * (m + 1);
         /* d >= estimate 는 항상 성립 */
-        if (d == estimate) count = 2 * m + 1;
-        else if (d <= estimate + (m + 1)) count = 2 * m + 2;
-//        else if (d > estimate + (m + 1)) count = 2 * m + 3;
+        int error = d - estimate;
+        if (error == 0) count = 2 * m + 1;
+        else if (error <= m + 1) count = 2 * m + 2;
+//        else if (error > m + 1) count = 2 * m + 3;
         else count = 2 * m + 3; // 효율을 위해 위의 식을 이와 같이 변경
         return count;
     }
@@ -95,12 +96,13 @@ public class _09_01011_FlyMeToTheAlphaCentauri {
     /* (3) n(n+1) = d 에서 근의 공식을 이용해서 n을 d에 관한 식으로 정리한 풀이 */
     private static int equation2(int d) {
         int count;
-        int m = (int) ((-1 + Math.sqrt(1 + 4 * d)) / 2);
+        int m = (int) ((-1 + Math.sqrt(1 + 4L * d)) / 2);   // [주의] 정수 오버플로우 가능성
         int estimate = m * (m + 1);
         /* d >= estimate 는 항상 성립 */
-        if (d == estimate) count = 2 * m;
-        else if (d <= estimate + (m + 1)) count = 2 * m + 1;
-//        else if (d > estimate + (m + 1)) count = 2 * m + 2;
+        int error = d - estimate;
+        if (error == 0) count = 2 * m;
+        else if (error <= m + 1) count = 2 * m + 1;
+//        else if (error > m + 1) count = 2 * m + 2;
         else count = 2 * m + 2; // 효율을 위해 위의 식을 이와 같이 변경
         return count;
     }
