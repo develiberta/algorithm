@@ -40,8 +40,21 @@ public class _04_01929_FindPrimeNumber {
         int M = Integer.parseInt(st.nextToken());
         int N = Integer.parseInt(st.nextToken());
 
-        for (int i=M; i<=N; i++) {
-            if (isPrime(i) == true) {
+        boolean[] isNotPrime = new boolean[N+1];
+        isNotPrime[0] = true;
+        isNotPrime[1] = true;
+
+        for (int i=2; i<Math.sqrt(isNotPrime.length); i++) {
+            if (isNotPrime[i] == true) {
+                continue;
+            }
+            for (int j=i*i; j<isNotPrime.length; j+=i) {
+                isNotPrime[j] = true;
+            }
+        }
+
+        for (int i=M; i<isNotPrime.length; i++) {
+            if (isNotPrime[i] == false) {
                 bw.write(i + "\n");
             }
         }
@@ -52,15 +65,4 @@ public class _04_01929_FindPrimeNumber {
         bw.close();
     }
 
-    private static boolean isPrime(int num) {
-        boolean isPrime = true;
-        for (int i=2; i<=Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-        return isPrime && num != 1;
-    }
 }
