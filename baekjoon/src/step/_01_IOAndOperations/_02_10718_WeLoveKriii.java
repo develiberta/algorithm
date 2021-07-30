@@ -6,8 +6,10 @@ package step._01_IOAndOperations;
  *
  * [단계]
  * 01. 입출력과 사칙연산
+ * 입력, 출력과 사칙연산을 연습해 봅시다. Hello World!
  * [제목]
  * 02. We love kriii (10718)
+ * 주어진 예제처럼 출력하는 문제 2
  * [문제]
  * ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는
  * 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.
