@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 /* date : 2021-08-10 (화)
  * author : develiberta
@@ -47,7 +46,7 @@ public class _05_01436_MovieDirectorShom {
         int M = 0;
         int result = 0;
 
-        for (int i=0; i<=(N/2)*1000+666; i++) {
+        for (int i=0; i<=N*1000+666; i++) {
             if (String.valueOf(i).contains("666")) {
                 M++;
             }
